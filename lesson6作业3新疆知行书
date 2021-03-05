@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>新疆行知书</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+
+			*{margin:0;padding:1px;}
+			body{text-align:center;background-color:#4169E1;}
+			#content{margin:0 auto;height:810px; width:780px;border:0px solid #000;background-color:white;}
+			/*body页面居中,width同banner宽度 为780px, height暂定810px最后记得删border*/
+	
+			.header{height:188px;/*banner150+button33*/width:100%;border:0px solid red;}
+			/*.header #banner{background-image:url("zhixingshubanner.jpg");}*/
+			#tophref{height:33px;width:100%;background-image:url("button.jpg");}
+			a:linked{color:blue}
+			a:visited{color: #00FF00;}
+			/*header样式 (banner + 超链接)*/
+	
+			.content{height:590px;width:100%;border:0px solid yellow;background-color:;}
+			#left{float:left; width:200px;height:580px;background-color:;}
+			/*weather宽200*/
+			#center{float:left; width:400px;height:580px;background-color:white;text-align:left;}
+			/*ghost宽390*/
+			#right{float:right; width:170px;height:580px;background-color:;}
+			/*map宽150*/
+			/*上为划定范围,下为制定字体*/
+			#weather{background-image:url("weather.jpg");background-repeat:norepeat;width:100%;height:47px;}
+			#weather #tianqi{padding-top:20px;}
+			/*天气图片高47px*/
+	
+			.lanzi{color:blue;background-color:skyblue;font-weight: bold;font-family:KaiTi_GB2312;text-align:left;padding:4px 2px;}
+			.lanzi img{padding-left:10px;}
+			.baizi{color:white;background-color:#00a5c2;font-size:0.75em;}
+			.underline{border-bottom:1px dashed white;text-align:left;padding:0 20px;}
+			.route{color:blue;font-size:0.75em;}
+			.routeicon{padding-left:20px;}
+			.beauty{padding:6px;}
+			/*上为所有字体,下为中间四个浮动*/
+			#beauty1{float:left; /*width:200px;height:580px;background-color:;*/}
+			#beauty2{float:left; /*width:200px;height:580px;background-color:;*/}
+			#beauty3{float:left; /*width:200px;height:580px;background-color:;*/}
+			#beauty4{float:left; /*width:200px;height:580px;background-color:;*/}
+			/*中间三列*/
+			
+			.footer{text-align:center;height:20px;width:100%;background-color:#00a5c2; border:0px solid green;}
+			.footer #footerblack{color:black}
+			.footer #footerwhite{color:white}
+			/*尾部只有一行*/
+		
+		</style>
+
+	</head>
+
+
+	<body>
+
+		<div id="content">
+
+			<div class="header">
+	
+				<div id="banner">
+					<img src="zhixingshubanner.jpg" alt="banner:zhixingshubanner.jpg" repeat="norepeat">
+				</div>
+			
+		<!--上为首页图片banner,下为一行超链接-->
+	
+				<div id="tophref">
+	
+			<a href="#">首页</a>
+	
+			<a href="#">新疆简介</a>
+	
+			<a href="#">风土人情</a>
+	
+			<a href="#">吃在新疆</a>
+	
+			<a href="#">路线选择</a>
+	
+			<a href="#">自助行</a>
+	
+			<a href="#">摄影摄像</a>
+	
+			<a href="#">游记精选</a>
+	
+			<a href="#">资源下载</a>
+	
+			<a href="#">雁过留声</a>
+	
+		</div>
+	
+			</div>
+
+	<!--头部结束,下为中部三列-->
+
+			<div class="content">
+
+				<div id="left">
+				
+					<div class="baizi" id="weather" style="height=47px">
+						<p id="tianqi"><b>天气查询</b></p>
+					</div>
+				
+					<div class="baizi">
+						</hr></br>
+						<img src="icon1.gif" alt="icon1"><span>乌鲁木齐&nbsp雷阵雨20°C-31°C</span></br>
+						<img src="icon1.gif" alt="icon1"><span>吐鲁番&nbsp多云转阴20°C-28°C</span></br>
+						<img src="icon1.gif" alt="icon1"><span>喀什&nbsp阵雨转多云25°C-32°C</span></br>
+						<img src="icon1.gif" alt="icon1"><span>库尔勒&nbsp阵雨转阴21°C-28°C</span></br>
+						<img src="icon1.gif" alt="icon1"><span>克拉玛依&nbsp雷阵雨26°C-30°C</span></br>
+					</div>
+				
+					<div class="lanzi">
+						<img src="icon2.gif">
+						<span>今日推荐</span>
+					</div>
+				
+					<div class="baizi">
+						<img src="tuijianganasihe.jpg" alt="tuijian喀纳斯河"></br>
+						<p>喀纳斯河</p>
+						<img src="tuijianbuerjin.jpg" alt="tuijian布尔津"></br>
+						<p>布尔津</p>
+						<img src="tuijiantianshanzhilu.jpg" alt="tuijian天山之路"></br>
+						<p>天山之路</p>
+					</div>
+				
+				</div>
+				
+				<div id="center">
+				
+					<div>
+						<img src="ghost.jpg" alt="ghost.jpg"></br>
+						<img src="picture_h1.gif" alt="美景寻踪">
+					</div>
+				
+					<div style="text-align:center;">
+						<div id="beauty1" class="beauty"><img src="beauty1.jpg" alt="美景1"></div>
+						<div id="beauty2" class="beauty"><img src="beauty2.jpg" alt="美景2"></div>
+						<div id="beauty3" class="beauty"><img src="beauty3.jpg" alt="美景3"></div>
+						<div id="beauty4" class="beauty"><img src="beauty4.jpg" alt="美景4"></div>
+					</div>
+				
+					<div>
+						<img src="route_h1.gif" alt="路线精选"></br>
+						<img src="icon1.gif" class="routeicon"><span class="route">吐鲁番——库尔勒——库车——塔中——和田——喀什</span></br>
+						<img src="icon1.gif" class="routeicon"><span class="route">乌鲁木齐——天池——克拉玛依——乌伦古湖——喀纳斯</span></br>
+						<img src="icon1.gif" class="routeicon"><span class="route">乌鲁木齐——奎屯——乔尔玛——那拉提——巴音布鲁克</span></br>
+						<img src="icon1.gif" class="routeicon"><span class="route">乌鲁木齐——五彩城——将军隔壁——吉木萨尔</span></br>
+					</div>
+				
+				</div>
+				
+				<div id="right">
+
+					<div class="lanzi">
+						<img src="icon2.gif"><span>新疆风光</span>
+					</div>
+					
+					<div class="baizi">
+						<img src="map1.jpg" alt="map1"></br></br>
+						<img src="map2.jpg" alt="map1"></br></br>
+					</div>
+					
+					<div class="lanzi">
+						<img src="icon2.gif"><span>小吃推荐</span>
+					</div>
+					
+					<div class="baizi" class="underline">
+						<!--<p style="border-bottom:1px dashed white;">17号抓饭</p>-->
+						</br>
+						<p class="underline">17号抓饭</p>
+						<p class="underline">大盘鸡</p>
+						<p class="underline">五一夜市</p>
+						<p class="underline">水果</p>
+						</br>
+					</div>
+					
+					<div class="lanzi">
+						<img src="icon2.gif"><span>宾馆酒店</span>
+					</div>
+					
+					<div class="baizi" class="underline">
+						</br>
+						<p class="underline">美丽华大饭店</p>
+						<p class="underline">海德大饭店</p>
+						<p class="underline">银都大饭店</p>
+						<p class="underline">鸿福大饭店</p>
+						<p class="underline">友好大酒店</p>
+						<p class="underline">棉麻宾馆</p>
+						<p class="underline">电信宾馆</p>
+					</br>
+					</div>
+					
+				</div>
+
+			</div>
+
+	<!--中间三列结束,下为尾部-->
+   
+			<div class="footer">
+				<span id="footerblack">艾萨克&copy版权所有</span>
+				<span id="footerwhite">demo@demo.com</span>
+			</div>   
+
+		</div>
+
+	</body>
+
+</html>
+
