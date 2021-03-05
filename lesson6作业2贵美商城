@@ -1,0 +1,68 @@
+<html>
+
+<head>
+
+<title>贵美商城</title>
+
+<meta charset="utf-8">
+
+<style type="text/css">
+
+  div{width:300px;margin:40px 20px;padding:0;}
+
+  ul{background-color:grey;list-style-type:disc;}
+
+  .orange{font-size:20px;color:orange;margin:0 40px;}
+
+  .small{font-family:FangSong_GB2312;color:darkgrey;}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+<div>
+
+<ul class="grey">
+
+  <li class="orange"><b>家用电器</b></li>
+
+   <ul>
+
+	<li class="small">大家电</li>
+
+	<li class="small">洗衣机</li>
+
+	<li class="small">电冰箱</li>
+
+	<li class="small">平板电视</li>
+
+   </ul>
+
+  <li class="orange"><b>日用百货</b></li>
+
+   <ul>
+
+	<li class="small">肥皂</li>
+
+	<li class="small">洗衣粉</li>
+
+	<li class="small">纸巾</li>
+
+	<li class="small">洗发水</li>
+
+   </ul>
+
+</ul>
+
+</div>
+
+</body>
+
+
+
+</html>
+
