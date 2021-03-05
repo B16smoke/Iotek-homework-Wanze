@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>贵美--商品分类</title>
+
+<meta charset="utf-8">
+
+<style type="text/css">
+
+  li{font-family:KaiTi_GB2312,Microsoft YaHei; font-size:30px}
+
+  .red{color:red; }
+
+  .blue{color:blue; }
+
+</style>
+
+</head>
+
+
+
+<body>
+
+<ul>
+
+  <li class="blue">家用电器</li>
+
+  <li class="red">各类书籍</li>
+
+  <li class="blue">手机数码</li>
+
+  <li class="red">日用百货</li>
+
+</ul>
+
+</body>
+
+
+
+</html>
+
