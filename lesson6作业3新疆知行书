@@ -14,8 +14,8 @@
 	
 			.header{height:188px;/*banner150+button33*/width:100%;border:0px solid red;}
 			/*.header #banner{background-image:url("zhixingshubanner.jpg");}*/
-			#tophref{height:33px;width:100%;background-image:url("button.jpg");}
-			a:linked{color:blue}
+			#tophref{height:33px;width:100%;background-image:url("旅游网图片/button.jpg");}
+			a:link{color:blue;}
 			a:visited{color: #00FF00;}
 			/*header样式 (banner + 超链接)*/
 	
@@ -62,34 +62,23 @@
 			<div class="header">
 	
 				<div id="banner">
-					<img src="zhixingshubanner.jpg" alt="banner:zhixingshubanner.jpg" repeat="norepeat">
+					<img src="旅游网图片/zhixingshubanner.jpg" alt="banner:zhixingshubanner.jpg" repeat="norepeat">
 				</div>
 			
 		<!--上为首页图片banner,下为一行超链接-->
 	
 				<div id="tophref">
-	
-			<a href="#">首页</a>
-	
-			<a href="#">新疆简介</a>
-	
-			<a href="#">风土人情</a>
-	
-			<a href="#">吃在新疆</a>
-	
-			<a href="#">路线选择</a>
-	
-			<a href="#">自助行</a>
-	
-			<a href="#">摄影摄像</a>
-	
-			<a href="#">游记精选</a>
-	
-			<a href="#">资源下载</a>
-	
-			<a href="#">雁过留声</a>
-	
-		</div>
+					<a href="#">首页</a>
+					<a href="#">新疆简介</a>
+					<a href="#">风土人情</a>
+					<a href="#">吃在新疆</a>
+					<a href="#">路线选择</a>
+					<a href="#">自助行</a>
+					<a href="#">摄影摄像</a>
+					<a href="#">游记精选</a>
+					<a href="#">资源下载</a>
+					<a href="#">雁过留声</a>
+				</div>
 	
 			</div>
 
@@ -105,24 +94,24 @@
 				
 					<div class="baizi">
 						</hr></br>
-						<img src="icon1.gif" alt="icon1"><span>乌鲁木齐&nbsp雷阵雨20°C-31°C</span></br>
-						<img src="icon1.gif" alt="icon1"><span>吐鲁番&nbsp多云转阴20°C-28°C</span></br>
-						<img src="icon1.gif" alt="icon1"><span>喀什&nbsp阵雨转多云25°C-32°C</span></br>
-						<img src="icon1.gif" alt="icon1"><span>库尔勒&nbsp阵雨转阴21°C-28°C</span></br>
-						<img src="icon1.gif" alt="icon1"><span>克拉玛依&nbsp雷阵雨26°C-30°C</span></br>
+						<img src="旅游网图片/icon1.gif" alt="icon1"><span>乌鲁木齐&nbsp雷阵雨20°C-31°C</span></br>
+						<img src="旅游网图片/icon1.gif" alt="icon1"><span>吐鲁番&nbsp多云转阴20°C-28°C</span></br>
+						<img src="旅游网图片/icon1.gif" alt="icon1"><span>喀什&nbsp阵雨转多云25°C-32°C</span></br>
+						<img src="旅游网图片/icon1.gif" alt="icon1"><span>库尔勒&nbsp阵雨转阴21°C-28°C</span></br>
+						<img src="旅游网图片/icon1.gif" alt="icon1"><span>克拉玛依&nbsp雷阵雨26°C-30°C</span></br>
 					</div>
 				
 					<div class="lanzi">
-						<img src="icon2.gif">
+						<img src="旅游网图片/icon2.gif">
 						<span>今日推荐</span>
 					</div>
 				
 					<div class="baizi">
-						<img src="tuijianganasihe.jpg" alt="tuijian喀纳斯河"></br>
+						<img src="旅游网图片/tuijianganasihe.jpg" alt="tuijian喀纳斯河"></br>
 						<p>喀纳斯河</p>
-						<img src="tuijianbuerjin.jpg" alt="tuijian布尔津"></br>
+						<img src="旅游网图片/tuijianbuerjin.jpg" alt="tuijian布尔津"></br>
 						<p>布尔津</p>
-						<img src="tuijiantianshanzhilu.jpg" alt="tuijian天山之路"></br>
+						<img src="旅游网图片/tuijiantianshanzhilu.jpg" alt="tuijian天山之路"></br>
 						<p>天山之路</p>
 					</div>
 				
@@ -131,23 +120,23 @@
 				<div id="center">
 				
 					<div>
-						<img src="ghost.jpg" alt="ghost.jpg"></br>
-						<img src="picture_h1.gif" alt="美景寻踪">
+						<img src="旅游网图片/ghost.jpg" alt="ghost.jpg"></br>
+						<img src="旅游网图片/picture_h1.gif" alt="美景寻踪">
 					</div>
 				
 					<div style="text-align:center;">
-						<div id="beauty1" class="beauty"><img src="beauty1.jpg" alt="美景1"></div>
-						<div id="beauty2" class="beauty"><img src="beauty2.jpg" alt="美景2"></div>
-						<div id="beauty3" class="beauty"><img src="beauty3.jpg" alt="美景3"></div>
-						<div id="beauty4" class="beauty"><img src="beauty4.jpg" alt="美景4"></div>
+						<div id="beauty1" class="beauty"><img src="旅游网图片/beauty1.jpg" alt="美景1"></div>
+						<div id="beauty2" class="beauty"><img src="旅游网图片/beauty2.jpg" alt="美景2"></div>
+						<div id="beauty3" class="beauty"><img src="旅游网图片/beauty3.jpg" alt="美景3"></div>
+						<div id="beauty4" class="beauty"><img src="旅游网图片/beauty4.jpg" alt="美景4"></div>
 					</div>
 				
 					<div>
-						<img src="route_h1.gif" alt="路线精选"></br>
-						<img src="icon1.gif" class="routeicon"><span class="route">吐鲁番——库尔勒——库车——塔中——和田——喀什</span></br>
-						<img src="icon1.gif" class="routeicon"><span class="route">乌鲁木齐——天池——克拉玛依——乌伦古湖——喀纳斯</span></br>
-						<img src="icon1.gif" class="routeicon"><span class="route">乌鲁木齐——奎屯——乔尔玛——那拉提——巴音布鲁克</span></br>
-						<img src="icon1.gif" class="routeicon"><span class="route">乌鲁木齐——五彩城——将军隔壁——吉木萨尔</span></br>
+						<img src="旅游网图片/route_h1.gif" alt="路线精选"></br>
+						<img src="旅游网图片/icon1.gif" class="routeicon"><span class="route">吐鲁番——库尔勒——库车——塔中——和田——喀什</span></br>
+						<img src="旅游网图片/icon1.gif" class="routeicon"><span class="route">乌鲁木齐——天池——克拉玛依——乌伦古湖——喀纳斯</span></br>
+						<img src="旅游网图片/icon1.gif" class="routeicon"><span class="route">乌鲁木齐——奎屯——乔尔玛——那拉提——巴音布鲁克</span></br>
+						<img src="旅游网图片/icon1.gif" class="routeicon"><span class="route">乌鲁木齐——五彩城——将军隔壁——吉木萨尔</span></br>
 					</div>
 				
 				</div>
@@ -155,16 +144,16 @@
 				<div id="right">
 
 					<div class="lanzi">
-						<img src="icon2.gif"><span>新疆风光</span>
+						<img src="旅游网图片/icon2.gif"><span>新疆风光</span>
 					</div>
 					
 					<div class="baizi">
-						<img src="map1.jpg" alt="map1"></br></br>
-						<img src="map2.jpg" alt="map1"></br></br>
+						<img src="旅游网图片/map1.jpg" alt="map1"></br></br>
+						<img src="旅游网图片/map2.jpg" alt="map1"></br></br>
 					</div>
 					
 					<div class="lanzi">
-						<img src="icon2.gif"><span>小吃推荐</span>
+						<img src="旅游网图片/icon2.gif"><span>小吃推荐</span>
 					</div>
 					
 					<div class="baizi" class="underline">
@@ -178,7 +167,7 @@
 					</div>
 					
 					<div class="lanzi">
-						<img src="icon2.gif"><span>宾馆酒店</span>
+						<img src="旅游网图片/icon2.gif"><span>宾馆酒店</span>
 					</div>
 					
 					<div class="baizi" class="underline">
