@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta name="Keywords" content="当当,购物,网购,数码,家居,饰品">
+
+	<meta name="Description" content="全球领先的综合性网上购物中心。超过100万种商品在线热销！图书、音像、母婴、美妆、家居、数码3C、服装、鞋包等几十大类，正品行货，低至2折，700多 ...">
+
+	<title>当当网</title>
+
+
+
+	<style type="text/css">
+
+		*{padding: 0; margin: 0;}
+
+		#header{width: 100%; height: 48px;}
+
+		#logo{float: left;}
+
+		#topright{float:right; }
+
+		#green{background-color:#C1FFE4; float: left; border: 1px #4EFEB3 solid; }
+
+		.topli{float: right; list-style-type: none;float: left;padding: 5px 10px; color: grey; }
+
+		/*顶部header样式*/
+
+
+
+		#globlelink{background-image: url("图片素材/menuBg.jpg");background-repeat: repeat-x; font-size: ; clear: both; width: 100%; height: 40px;}
+
+		.orangelist{float: left; list-style-type: none; padding: 7px 22px;}
+
+		a.gblink:link{color: white; text-decoration:none;}
+
+		a.gblink:visited{color: purple;}
+
+		/*globlelink全局链接样式*/
+
+
+
+		#banner{width: 100%; height: 200px;}
+
+		/*banner样式*/
+
+
+
+		#leftblock{float: left; /*width: 250px;*/width: 20%; height: 850px;
+
+		/*中间左侧暂定850高*/ }
+
+		#left1{/*width: 250px;*/width: 100%; height:540px; border: 1px solid gold; margin: 5px 0;}
+
+		#left2{/*width: 250px;*/width: 100%; height:260px; border: 1px solid gold; margin: 5px 0;}
+
+		h3{color: white;
+
+			background: url("图片素材/navTitleBg.jpg") left top;
+
+			background-size: auto 100%;
+
+			/*通过对只有一个竖条的背景图片横向复制并占满高度来实现*/
+
+			width: 100%; height: 30px; }
+
+		.leftlist{list-style-image: url("图片素材/dot.jpg");margin: 0px 30px; padding: 20px 0; }
+
+		.leli1{padding: 5px 0}
+
+		a.leftlink:link{color: grey; text-decoration:none;}
+
+		a.leftlink:visited{color: purple;}
+
+		/*中间左侧导航栏*/
+
+
+
+		#right{float: left; width: 75%; height: 950px; padding: 0 5px; }
+
+		/*中间右侧暂定950px高*/
+
+		.goodsblock{padding: 30px 2px;width: 100%; height: 26%; }
+
+		h2{color: gold; border-bottom: 1px solid gold; }
+
+		.goods{float: left; width: 20%;height: 28%; position: relative; }
+
+		.goodspic{/*position: absolute; top: 20px; left: 20px;
+
+			定位向右20,向下20*/
+
+			border: 1 solid grey; margin: 20px 0 0 20px}
+
+		.goodsnum{position: absolute; top: 20px; left: 20px;}
+
+		a.蓝字:link{color: blue;text-decoration: none; }
+
+		.删除线{text-decoration: line-through; }
+
+		.现价{color: red; font-weight: bold;}
+
+		/*中间右侧正文 商品*/
+
+
+
+		#footer{
+
+			clear: both;
+
+			text-align: center;
+
+			border-top:1px solid grey;
+
+			color: grey;
+
+			height: 60px;
+
+			width: 100%;
+
+		}
+
+		.经营许可{display: inline; }
+
+	</style>
+
+</head>
+
+
+
+<body>
+
+<div style="margin: 0 30px;">
+
+	<div id="header">
+
+
+
+		<div id="logo">
+
+			<img src="图片素材/logo.jpg" alt="dangdanglogo">
+
+		</div>
+
+
+
+		<div id="topright">
+
+			<div>
+
+				&nbsp;&nbsp;
+
+				<img src="图片素材/icon_count.png" alt="30%off">
+
+			</div>
+
+
+
+			<div id="green">
+
+				<ul>
+
+					<li class="topli">尾品汇</li>
+
+					<li class="topli">当当优品</li>
+
+					<li class="topli">数字馆</li>
+
+					<li class="topli">都看阅器</li>
+
+				</ul>
+
+			</div>	
+
+		</div>
+
+	</div>
+
+	<!--顶部左侧logo以及右侧小文字-->
+
+
+
+	<div id="globlelink">
+
+		<ul>
+
+			<li class="orangelist"><a href="#" class="gblink">首页</a></li>
+
+			<li class="orangelist"><a href="#" class="gblink">图书</a></li>
+
+			<li class="orangelist"><a href="#" class="gblink">音像</a></li>
+
+			<li class="orangelist"><a href="#" class="gblink">童装</a></li>
+
+			<li class="orangelist"><a href="#" class="gblink">服装</a></li>
+
+			<li class="orangelist"><a href="#" class="gblink">鞋靴</a></li>
+
+			<li class="orangelist"><a href="#" class="gblink">运动</a></li>
+
+			<li class="orangelist"><a href="#" class="gblink">箱包</a></li>
+
+			<li class="orangelist"><a href="#" class="gblink">美妆</a></li>
+
+			<li class="orangelist"><a href="#" class="gblink">珠宝</a></li>
+
+			<li class="orangelist"><a href="#" class="gblink">家居</a></li>
+
+			<li class="orangelist"><a href="#" class="gblink">食品</a></li>
+
+			<li class="orangelist"><a href="#" class="gblink">酒</a></li>
+
+			<li class="orangelist"><a href="#" class="gblink">手机</a></li>
+
+			<li class="orangelist"><a href="#" class="gblink">数码</a></li>
+
+			<li class="orangelist"><a href="#" class="gblink">电脑</a></li>
+
+			<li class="orangelist"><a href="#" class="gblink">家电</a></li>
+
+		</ul>
+
+	</div>
+
+	<!--第二行全局链接-->
+
+
+
+	<div id="banner">
+
+		<img src="图片素材/banner.jpg"
+
+		 alt="banner" 
+
+		 width="100%">
+
+	</div>
+
+	<!--第三行banner图片-->
+
+
+
+	<div id="leftblock">
+
+		<div id="left1">
+
+			<h3>分类浏览</h3>
+
+			<ul class="leftlist">
+
+				<li class="leli1"><a href="#" class="leftlink">数码影音</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">家居装饰</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">母婴用品</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">美妆个护</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">食品保健</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">潮流服装</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">家具装饰</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">手表饰品</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">鞋包皮具</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">家用电器</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">电脑办公</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">玩具文具</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">汽车用品</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">手机通讯</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">流行饰品</a></li>
+
+			</ul>
+
+		</div>
+
+		<div id="left2">
+
+			<h3>推荐榜单</h3>
+
+			<ul class="leftlist">
+
+				<li class="leli1"><a href="#" class="leftlink">图书畅销榜</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">音乐畅销榜</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">影视畅销榜</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">百货畅销榜</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">图书飙升榜</a></li>
+
+				<li class="leli1"><a href="#" class="leftlink">新书热卖榜</a></li>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+	<!--中部左侧导航栏 -->
+
+
+
+	<div id="right">
+
+		<div class="goodsblock">
+
+			<h2><img src="图片素材/titleDot.jpg" alt="titleDot">数码影音</h2>
+
+			<div class="goods">
+
+				<img src="图片素材/electron-01.jpg" alt="electron-01.jpg" class="goodspic">
+
+				<img src="图片素材/item_1.gif" alt="item_1" class="goodsnum">
+
+				<p><a href="#" class="蓝字">【仅限一天】爱国者 半岛铁盒 U10000毫</a></p>
+
+				<p class="删除线">￥699.00</p>
+
+				<p class="现价">￥299.00</p>
+
+			</div>
+
+
+
+			<div class="goods">
+
+				<img src="图片素材/electron-02.jpg" alt="electron-01.jpg" class="goodspic">
+
+				<img src="图片素材/item_2.gif" alt="item_2" class="goodsnum">
+
+				<p><a href="#" class="蓝字">【限时抢购】羽博YB637 YB647移动电源苹</a></p>
+
+				<p class="删除线">￥499.00</p>
+
+				<p class="现价">￥199.00~359.00</p>
+
+			</div>
+
+
+
+			<div class="goods">
+
+				<img src="图片素材/electron-03.jpg" alt="electron-01.jpg" class="goodspic">
+
+				<img src="图片素材/item_3.gif" alt="item_3" class="goodsnum">
+
+				<p><a href="#" class="蓝字">【2013升级版/热销5000件】Philips/飞利</a></p>
+
+				<p class="删除线">￥699.00</p>
+
+				<p class="现价">￥299.00</p>
+
+			</div>
+
+
+
+			<div class="goods">
+
+				<img src="图片素材/electron-04.jpg" alt="electron-01.jpg" class="goodspic">
+
+				<img src="图片素材/item_4.gif" alt="item_4" class="goodsnum">
+
+				<p><a href="#" class="蓝字">【绝对超值】紫光电子 双声道立体声耳机</a></p>
+
+				<p class="删除线">￥99.00</p>
+
+				<p class="现价">￥49.00</p>
+
+			</div>
+
+
+
+			<div class="goods">
+
+				<img src="图片素材/electron-05.jpg" alt="electron-01.jpg" class="goodspic">
+
+				<img src="图片素材/item_5.gif" alt="item_5" class="goodsnum">
+
+				<p><a href="#" class="蓝字">【热销2000台】紫光电子 专业高清V-P30</a></p>
+
+				<p class="删除线">￥599.00</p>
+
+				<p class="现价">￥299.00</p>
+
+			</div>
+
+		</div>
+
+		<!--数码影音-->
+
+
+
+		<div class="goodsblock">
+
+			<h2><img src="图片素材/titleDot.jpg" alt="titleDot">家居装饰</h2>
+
+
+
+			<div class="goods">
+
+				<img src="图片素材/home-1.jpg" alt="home-1.jpg" class="goodspic">
+
+				<img src="图片素材/item_1.gif" alt="item_1" class="goodsnum">
+
+				<p><a href="#" class="蓝字">当当优品 牛津布百纳箱 收纳箱 66L（多</a></p>
+
+				<p class="删除线">￥179.00</p>
+
+				<p class="现价">￥79.00~89.00</p>
+
+			</div>
+
+
+
+			<div class="goods">
+
+				<img src="图片素材/home-2.jpg" alt="home-2.jpg" class="goodspic">
+
+				<img src="图片素材/item_2.gif" alt="item_2" class="goodsnum">
+
+				<p><a href="#" class="蓝字">当当优品 全棉柔软吸水 纯色经典家庭中</a></p>
+
+				<p class="删除线">￥49.00</p>
+
+				<p class="现价">￥29.00</p>
+
+			</div>
+
+
+
+			<div class="goods">
+
+				<img src="图片素材/home-3.jpg" alt="home-3.jpg" class="goodspic">
+
+				<img src="图片素材/item_3.gif" alt="item_3" class="goodsnum">
+
+				<p><a href="#" class="蓝字">索尔诺五层儿童书柜/多功能收纳层架/简</a></p>
+
+				<p class="删除线">￥200.00</p>
+
+				<p class="现价">￥105.00</p>
+
+			</div>
+
+
+
+			<div class="goods">
+
+				<img src="图片素材/home-4.jpg" alt="home-4.jpg" class="goodspic">
+
+				<img src="图片素材/item_4.gif" alt="item_4" class="goodsnum">
+
+				<p><a href="#" class="蓝字">[当当自营]LOCK&LOCK乐扣 格拉斯耐</a></p>
+
+				<p class="删除线">￥299.00</p>
+
+				<p class="现价">￥156.00</p>
+
+			</div>
+
+
+
+			<div class="goods">
+
+				<img src="图片素材/home-5.jpg" alt="home-5.jpg" class="goodspic">
+
+				<img src="图片素材/item_5.gif" alt="item_5" class="goodsnum">
+
+				<p><a href="#" class="蓝字">[当当自营]LOCK&LOCK乐扣 运动水杯</a></p>
+
+				<p class="删除线">￥149.00</p>
+
+				<p class="现价">￥89.00</p>
+
+			</div>
+
+		</div>
+
+		<!--家居装饰-->
+
+
+
+		<div class="goodsblock">
+
+			<h2><img src="图片素材/titleDot.jpg" alt="titleDot">流行饰品</h2>
+
+			<!--用edge浏览器会显示这个标题不靠左,在第二个图片上方,IE 和 chrome浏览器正常显示, 不知道原因...
+
+				update:之前未设置.goods以及.goodsblock的width及height,规定了范围以后就没有这样的情况了-->
+
+
+
+			<div class="goods">
+
+				<img src="图片素材/beauty-1.jpg" alt="beauty-1.jpg" class="goodspic">
+
+				<img src="图片素材/item_1.gif" alt="item_1" class="goodsnum">
+
+				<p><a href="#" class="蓝字">诗蔓 【原创正品 独家首发】专柜正品 纯</a></p>
+
+				<p class="删除线">￥568.00</p>
+
+				<p class="现价">￥128.00</p>
+
+			</div>
+
+
+
+			<div class="goods">
+
+				<img src="图片素材/beauty-2.jpg" alt="beauty-2.jpg" class="goodspic">
+
+				<img src="图片素材/item_2.gif" alt="item_2" class="goodsnum">
+
+				<p><a href="#" class="蓝字">鼎顺 29.9秒杀 天然红檀木 佛珠手链手</a></p>
+
+				<p class="删除线">￥99.00</p>
+
+				<p class="现价">￥29.00</p>
+
+			</div>
+
+
+
+			<div class="goods">
+
+				<img src="图片素材/beauty-3.jpg" alt="beauty-3.jpg" class="goodspic">
+
+				<img src="图片素材/item_3.gif" alt="item_3" class="goodsnum">
+
+				<p><a href="#" class="蓝字">KASSIA卡希雅正品 9-10mm天然珍珠项链 </a></p>
+
+				<p class="删除线">￥1280.00</p>
+
+				<p class="现价">￥258.00</p>
+
+			</div>
+
+
+
+			<div class="goods">
+
+				<img src="图片素材/beauty-4.jpg" alt="beauty-4.jpg" class="goodspic">
+
+				<img src="图片素材/item_4.gif" alt="item_4" class="goodsnum">
+
+				<p><a href="#" class="蓝字">欧炫 最爱四叶草奥地利元素 水晶材质项</a></p>
+
+				<p class="删除线">￥299.00</p>
+
+				<p class="现价">￥68.00</p>
+
+			</div>
+
+
+
+			<div class="goods">
+
+				<img src="图片素材/beauty-5.jpg" alt="beauty-5.jpg" class="goodspic">
+
+				<img src="图片素材/item_5.gif" alt="item_5" class="goodsnum">
+
+				<p><a href="#" class="蓝字">凤凰涅磐项链 女 手链 天然水晶干青手串</a></p>
+
+				<p class="删除线">￥398.00</p>
+
+				<p class="现价">￥198.00</p>
+
+			</div>
+
+		</div>
+
+		<!--流行装饰-->
+
+	</div>
+
+	<!--中部右侧三行正文 -->
+
+
+
+	<div id="footer">
+
+		<span>
+
+		Copyright&copy当当网2004-2013,All Right Reserved
+
+		</span>
+
+		<img src="图片素材/validate.gif" alt="经营许可" class="经营许可">
+
+		<span>
+
+		京ICP证041189号出版物经营许可证&nbsp新出发京批字第直0673号</span>
+
+	</div>
+
+	<!--底部经营许可-->
+
+</div>
+
+</body>
+
+
+
+</html>
