@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>0306-1伪类</title>
+
+	<style type="text/css">
+
+		li{
+
+			float: left;
+
+			width: 100px; height: 36px;
+
+			background-color: black;
+
+			list-style-type: none;
+
+			text-align: center;
+
+			padding-top: 10px;
+
+		}
+
+		a{
+
+			color: white;
+
+			font-weight: bold;
+
+			font-size: 0.8em;
+
+			text-decoration: none;
+
+		}
+
+		a:hover{
+
+			background:url("图片素材/titleDot.jpg");
+
+			color: black;
+
+		}
+
+	</style>
+
+</head>
+
+
+
+<body>
+
+	<ul>
+
+		<li><a href="#">首&nbsp页</a></li>
+
+		<li><a href="#">学习论坛</a></li>
+
+		<li><a href="#">学院问答</a></li>
+
+		<li><a href="#">IT圈子</a></li>
+
+		<li><a href="#">实时课堂</a></li>
+
+		<li><a href="#">客户端下载</a></li>
+
+		<li><a href="#">帮助中心</a></li>
+
+
+
+	</ul>
+
+</body>
+
+</html>
