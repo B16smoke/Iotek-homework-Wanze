@@ -1,0 +1,42 @@
+public class Main
+
+{
+
+	public static void main(String[] args) {
+
+	  String name = "lisi"; //姓名
+
+	  char sex = '男'; //性别
+
+	  int age = 25; //年龄
+
+	  int salary = 3000; //工资
+
+	  double socialS = 314.59; //社保
+
+	  //声明,定义变量
+
+	   
+
+	  System.out.println("姓名: " + name + ";");
+
+	  System.out.println("性别: " + sex + ";");
+
+	  System.out.println("年龄: " + age + ";");
+
+		System.out.println("工资: " + salary + ";");
+
+		System.out.println("社保: " + socialS);
+
+		//竖行输出
+
+		System.out.println("姓名\t性别\t年龄\t工资\t社保");
+
+		System.out.println(name+"\t"+sex+"\t"+age+"\t"+salary+"\t"+socialS);
+
+		//横行输出
+
+	}
+
+}
+
