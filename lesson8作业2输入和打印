@@ -1,0 +1,30 @@
+import java.util.Scanner;//导入
+
+
+
+public class 作业2输入和打印
+
+{
+
+	public static void main(String[] args) {
+
+	  Scanner input = new Scanner(System.in);
+
+	  System.out.println("请在下面输入自己的姓名: ");
+
+	  String name = input.next();//姓名
+
+	  System.out.println("请在下面输入自己的年龄: ");
+
+	  int age = input.nextInt();//年龄(注意是nextInt而不是nextAge,一开始写错了跑不过.)
+
+	  //定义变量
+
+	  System.out.println("您的姓名是: "+name+"\t年龄为: "+age);
+
+	  //输出
+
+	}
+
+}
+
