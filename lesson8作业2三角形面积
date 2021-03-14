@@ -1,0 +1,27 @@
+import java.util.Scanner;//导入
+public class 作业3三角形面积 {
+	public static void main(String[] args) {
+
+		  Scanner input = new Scanner(System.in);
+
+		  System.out.println("该程序是为了计算三角形的面积.");
+
+		  System.out.println("请输入三角形的底长: cm");
+
+		  double a = input.nextFloat();//底a
+
+		  System.out.println("请输入该三角形的高: cm");
+
+		  double h = input.nextFloat();//高h
+
+		  //输入底和高
+
+		  double s = 0;//声明面积s
+
+		  s = (a*h)/2;//算法
+
+		  System.out.println("该三角形的面积为: "+s+" cm^2");
+
+		}
+
+}
