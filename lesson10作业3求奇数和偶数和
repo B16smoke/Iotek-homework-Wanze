@@ -1,0 +1,61 @@
+/*
+求1到100之间的奇数之和与偶数之和
+*/
+
+public class Main{
+
+
+
+	public static void main(String[]args){
+
+
+
+		int num = 1;//数字初始值为1
+
+		int sum = 0;//声明结果,初始值为0
+
+
+
+		//奇数之和用while循环实现,打印出来之后归零,不用声明新变量,偶数和用do-while来做
+
+		//num初始值为1,用while循环先算奇数和.
+
+		while(num <= 100){
+
+			sum = num + sum;//注意:此处应先算和,再自增,否则计算结果比实际结果大
+
+			num += 2;
+
+		}
+
+
+
+		System.out.println("1到100之间的奇数和为: "+sum);//输出奇数和
+
+
+
+		num = 0;
+
+		sum = 0;//归零
+
+
+
+		//num初始值为0,用do-while实现
+
+		do{
+
+			sum = num + sum;
+
+			num += 2;
+
+		}while(num <= 100);
+
+
+
+		System.out.println("1到100之间的偶数和为: "+sum);//输出偶数和
+
+
+
+	}
+
+}
