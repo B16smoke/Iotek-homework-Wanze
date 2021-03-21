@@ -42,7 +42,7 @@ public class Main{
 
 		}else if(age >= 0){
 
-			System.out.println("少年");//0-18岁输出童年			
+			System.out.println("童年");//0-18岁输出童年			
 
 		}else{
 
