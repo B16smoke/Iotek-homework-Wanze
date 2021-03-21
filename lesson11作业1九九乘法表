@@ -1,0 +1,34 @@
+//使用双重循环打印九九乘法表
+
+public class Main{
+
+
+
+	public static void main(String[]args){
+
+
+
+		for(int i = 1; i <= 9; i++){//一重循环定义行数
+
+
+
+			for(int j =1; j <= i ; j++){//二重循环定义该行有几列
+
+
+
+				System.out.print(i+"*"+j+"="+i*j+"\t");
+
+			}
+
+
+
+			System.out.println();//换行
+
+		}
+
+
+
+	}
+
+}
+
