@@ -1,0 +1,409 @@
+/*
+猜拳游戏
+
+编写一个猜拳游戏，进入新游戏需要输入用户的昵称，选择对手（对手随机出拳），然后进行游戏，游戏可以多局的形式，游戏中胜利分数加1，平局和输了不加分不减分，游戏结束告知游戏中的成绩返回游戏主界面，用户可以通过排行榜查看前10的分数（需要排序），通过退出可以结束游戏。游戏中的数据不需要永久保存，只有在本次运行中作短期的保存即可，也可以自主的写入一些伪数据。该游戏要注意界面的友好，代码的合理，必须符合代码的规范和代码的优化，尽自己所学避免程序发生异常现象。
+
+游戏规则：石头剪刀布，石头赢剪刀，剪刀赢布，布赢石头
+
+提示：
+
+随机数使用
+
+Random random = new Random();
+
+int index = random.nextInt(2);//随机0~2之间的数
+*/
+import java.util.Scanner;
+import java.util.Random;
+
+public class Mora{
+
+	public static void main(String[] args){//主方法		
+
+		Scanner input = new Scanner(System.in);//创建扫描器
+		
+		System.out.println("============================================================================");//欢迎界面
+		System.out.println("                                                                          ");
+		System.out.println("                                    .......                                     ");
+		System.out.println("                                  .:::::::::.                                     ");
+		System.out.println("                               .:::::::::::::::.                                         ");
+		System.out.println("                     .-.    .:::::::::::::::::::::.    .-.                                       ");
+		System.out.println("                    /   `.:::: $ :::::: :::::: $ ::::.`   `                                         ");
+		System.out.println("                   |     ::::: % ::::: $ ::::: $ :::::    |                                        ");
+		System.out.println("                    `    :::::: $ ::: $ $ ::: $ :::::    /                                        ");
+		System.out.println("                     `___`:::::: $ : $ : $ : $ ::::`____/                                         ");
+		System.out.println("                            `:::: $ $ ::: $ $ ::::`                                            ");
+		System.out.println("                              `::: $ ::::: $ :::`                                            ");
+		System.out.println("                                `:::::::::::::`                                           ");
+		System.out.println("                                  `:::::::::`                                        ");
+		System.out.println("                                    `:::::`                                      ");
+		System.out.println("                                     `:::`                                     ");
+		System.out.println("                                      :::                                    ");
+		System.out.println("                                      `:`                                   ");
+		System.out.println("                                      .:.                                  ");
+		System.out.println("                          ..          :::          ..                         ");
+		System.out.println("                         ||:::::   .:  :  :.   :::::||                              ");
+		System.out.println("                        //      `.:    :    :.`      \\                         ");
+		System.out.println("                                                                          ");
+		System.out.println("                                                                          ");
+		System.out.println("		    	            [请按任意键开始游戏]                            ");
+		System.out.println("                                                                          ");
+		System.out.println("============================================================================");//欢迎界面终了
+/*
+===============================================================================================================================
+
+                                                       声明变量区
+*/
+		String key = input.next();// 用户输入 程序开始
+
+		//预先填入10个伪数据
+		String[] name = {"宛泽","范范","小hui","Ares","双强","Bella","帅康","周杰伦","昆凌","Zack"};//用户名 用户名太长会导致排行榜显示对不齐...
+		String[] pwd = {"7507058","123","xiaohui","Bai","topgun","tian","555","jay","jaychou","superman"};//用户密码
+		int[] score = {5, 20, 6, 1, 2, 7, 3, 8, 0, 9};//用户成绩
+
+		int option = -1;//选择
+		Boolean flag = false;// 判断循环是否结束
+
+		String newName = null;//注册新用户的用户名
+		String newPwd = null;// 注册新用户的密码
+		
+		String pcName = null;// 选择对战的对手名
+		
+		int userOption = 0;// 用户出拳
+		int pcOption = 0;// 电脑随机出拳
+		int newScore = 0;// 本轮得分
+		int count = 0;//计数 用于查询用户输入用户名是否在数组内
+
+		int tempScoreSort = 0;//排序时的暂时得分
+		String tempNameSort = null;//排序时的暂存用户名
+		String tempPwdSort = null;// 排序时暂存密码
+
+/*
+===============================================================================================================================
+
+
+*/
+		do{//循环显示
+
+			System.out.println("============================================================================");//欢迎界面
+			System.out.println("|***                                                                    ***|");
+			System.out.println("|*****                                                                *****|");
+			System.out.println("|*******                                                            *******|");
+			System.out.println("|*********                                                        *********|");
+			System.out.println("|***********                                                    ***********|");
+			System.out.println("|*************        1.注册   2.登录   3.排行榜   0.退出     *************|");
+			System.out.println("|***********                                                    ***********|");
+			System.out.println("|*********                请输入序号来执行相应操作     		  *********|");
+			System.out.println("|*******                                                            *******|");
+			System.out.println("|*****                                                                *****|");
+			System.out.println("|***                                                                    ***|");
+			System.out.println("============================================================================");//欢迎界面终了
+			
+			option = input.nextInt();//用户输入选择
+
+			switch (option){// 根据选择开始执行
+/*
+================================================================================================================================
+
+													   注册账号区
+
+*/
+				case 1 :// 注册账号 newName为新用户名,newPwd为新密码,新用户的得分为0
+					
+					System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+					System.out.println("                             注册账号");
+					System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+					//用数组记录账号
+					do{
+						flag = false;// 判断归零
+						System.out.println("请输入注册账号的用户名:");
+						newName = input.next();// 新建用户名
+						System.out.println("请输入注册账号的密码:");
+						String newPwd01 = input.next();//第一遍输入密码
+						System.out.println("请再次确认密码:");
+						String newPwd02 = input.next();//第二遍确认密码
+
+						if(newPwd01.equals(newPwd02)){// 判断两次密码输入是否一致
+							newPwd = newPwd01;// 新建用户密码
+							System.out.println("注册成功!请输入2登录进行游戏~");
+							break;
+						}else{
+							System.out.println("两次密码输入不一致,请重新输入~");
+							System.out.println("***********************************************************");
+							flag = true;
+						}// 判断密码终了
+					}while(flag);//注册循环终了
+					flag = false;// 判断归零
+					
+
+					//用更换地址实现数组内数量的增加
+
+					//用户名扩容=============================================================
+					String []tempName = new String[name.length + 1];//暂时定义一个新用户名数组
+					for(int i = 0; i < name.length; i++){
+						tempName[i] = name[i];//前面10项不变					
+					}
+					tempName[tempName.length - 1] = newName;//新增用户名在最末尾
+					name = tempName;
+					//用户名扩容终了
+
+					//用户密码扩容===========================================================
+					String []tempPwd = new String[pwd.length + 1];//暂时定义一个新用户密码数组
+					for(int i = 0; i < pwd.length; i++){
+						tempPwd[i] = pwd[i];//前面10项不变					
+					}
+					tempPwd[tempPwd.length - 1] = newPwd;//新增用户密码在最末尾
+					pwd = tempPwd;
+					//用户密码扩容终了
+
+					//用户得分扩容=============================================================
+					int []tempScore = new int[score.length + 1];//暂时定义一个新用户名数组
+					for(int i = 0; i < score.length; i++){
+						tempScore[i] = score[i];//前面10项不变					
+					}
+					tempScore[tempScore.length - 1] = 0;//新增用户得分为0
+					score = tempScore;
+					//用户得分扩容终了=========================================================
+
+					break;// 注册账号终了
+/*
+================================================================================================================================
+
+													  登录并进行游戏区
+
+
+
+*/
+				case 2 :// 登录并开始游戏
+					System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+					System.out.println("                             登陆账号");
+					System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+					//登录
+					System.out.println("请输入用户名:");
+					String logName = input.next();//登录名
+					System.out.println("请输入密码:");
+					String logPwd = input.next();//登陆密码
+
+					for(int i = 0; i < name.length; i++){
+
+						//如果遍历过数组都没有则count计数,最后count等于用户名数组长度则报错
+						if( !name[i].equals(logName) ){
+							count = 0;//归0
+							count += ( 1*(i+1));//查询第几个用户名 则计数加几
+							if(count == name.length){
+								System.out.println("未查询到该用户,请先注册~");
+								break;
+							}
+						}
+
+
+						//如果账号对,密码不对则报错密码一次
+						if ( (name[i].equals(logName)) && !pwd[i].equals(logPwd) ) {
+							System.out.println("密码输入错误~");
+							break;							
+						}
+
+						//如果账户密码都正确则游戏开始
+						if( (name[i].equals(logName)) && pwd[i].equals(logPwd) ){// 判断用户输入的用户名和密码是否在数组里
+							System.out.println("登陆成功! 欢迎您: " + name[i] +" !");//用户名和密码都正确则开始游戏
+
+							//选择对手							
+							do{
+								System.out.println("============================================================");
+								System.out.println("下面进行选人阶段~");
+								System.out.println("1.雷神索尔\t2.肯德基上校\t3.Saber");
+								System.out.println("请输入数字选择相应的对手:");
+								option = input.nextInt();// 输入选择
+
+								flag = false;//判断归零
+								switch(option) {
+								case 1 : 
+									System.out.println();
+									System.out.println(">>>>>>>>>>>>>>>>>>>  Thor: 为了阿斯加德  <<<<<<<<<<<<<<<<<<<");
+									System.out.println();
+									pcName = "Thor";
+									break;
+								case 2 :
+									System.out.println();
+									System.out.println(">>>>>>>>>>>>>>>>>>  肯德基上校: 异世相遇,尽享美味  <<<<<<<<<<<<<<<<");
+									System.out.println();
+									pcName = "KFC";
+									break;
+								case 3 :
+									System.out.println();
+									System.out.println(">>>>>>>>>>>>>>>>>>  Saber: 赌上骑士王的荣耀  <<<<<<<<<<<<<<<<<<");
+									System.out.println();
+									pcName = "Saber";
+									break;
+								default :
+									System.out.println("该对手暂时休战~");
+									flag = true;//继续循环 
+							}	// 选人终了
+						}while(flag);
+							
+							System.out.println("|=============================================================================|");//开始界面
+							System.out.println("|*****************************************************************************|");
+							System.out.println("|*****************************************************************************|");
+							System.out.println("|*******************************[ 游 戏  开 始 ! ]****************************|");
+							System.out.println("|*****************************************************************************|");
+							System.out.println("|*****************************************************************************|");
+							System.out.println("|=============================================================================|");//开始界面终了
+							System.out.println();
+							System.out.println();
+							System.out.println();
+							//开始游戏
+							//用户出招
+							do{
+								System.out.println();
+								System.out.println(" ============================================================================ ");
+								System.out.println("|                                                                            ");
+								System.out.println("|                            请输入数字选择你要出什么:                         ");
+								System.out.println("|                                                                            ");
+								System.out.println("|                                                                            ");
+								System.out.println("|                              1.石头     2.剪刀     3.布                          ");
+								System.out.println("|                                                                            ");
+								System.out.println("|                                      0.退出                               ");
+								System.out.println(" ============================================================================ ");
+								System.out.println();
+								userOption = input.nextInt();
+								Random random = new Random();
+								pcOption = random.nextInt(3)+1;
+								//显示用户和电脑出的什么
+								if(userOption != 0){
+									System.out.println("**************************************************");
+									System.out.println("你的出招为: "+userOption+"\t"+pcName+"出的: "+pcOption);
+									//判断输赢
+									if( (userOption==1&&pcOption==2) || (userOption==2&&pcOption==3) || (userOption==3&&pcOption==1) ) {// 胜利的判定条件
+										System.out.println();
+										System.out.println();
+										System.out.println("                您获胜! 得分+1");// 输出获胜
+										System.out.println();
+										System.out.println("**************************************************");
+										newScore += 1;// 得分加一
+									}else if( (userOption==1&&pcOption==1) || (userOption==2&&pcOption==2) || (userOption==3&&pcOption==3) ) {//平局的判定条件
+										System.out.println();
+										System.out.println();
+										System.out.println("                平局! 得分不变");// 输出平局
+										System.out.println();
+										System.out.println("**************************************************");
+									}else if( (userOption==1&&pcOption==3) || (userOption==2&&pcOption==1) || (userOption==3&&pcOption==2) ) {//输的判定条件{
+										System.out.println();
+										System.out.println();
+										System.out.println("               您输了! 得分不变");// 输出失败
+										System.out.println();
+										System.out.println("**************************************************");
+									}else{
+										System.out.println();
+										System.out.println("****************************");
+										System.out.println("输入有误,请输入数字1, 2, 3, 或者0~");
+									}
+								}else{
+									System.out.println();
+									System.out.println("****************************");
+									System.out.println("############################");
+									System.out.println("========= !游戏结束! ========");
+									System.out.println("############################");
+									System.out.println("****************************");
+									score[i] += newScore;//此轮得分加在用户得分数组里
+									break;
+								}
+								
+							}while(userOption != 0);								
+							
+							//显示本轮成绩
+							System.out.println("============================================================================");
+							System.out.println("您现在的得分为: "+newScore);// 输出当前分数
+							System.out.println();
+
+							break;//游戏主体结束
+						}
+
+					}// 判断用户名终了
+					
+					continue;// 游戏终了
+/*
+================================================================================================================================
+
+													    排行榜显示区
+
+
+*/
+				case 3 :// 查看排行榜
+					// 冒泡排序 按照分数从大到小排列					
+					for(int i = 0; i < score.length - 1; i++){// 虽然只打印出前十名,但是需要全部比较后才能得出正确的分数排序
+						for(int j = 0; j < score.length - 1 - i; j++){
+							if(score[j+1] > score[j]){// 冒泡排序 后面的比前面小则前进
+								// 分数换位
+								tempScoreSort = score[j];// 暂存
+								score[j] = score[j+1];
+								score[j+1] = tempScoreSort;
+								// 用户名换位
+								tempNameSort = name[j];// 暂存
+								name[j] = name[j+1];
+								name[j+1] = tempNameSort;
+								// 密码换位
+								tempPwdSort = pwd[j];// 暂存
+								pwd[j] = pwd[j+1];
+								pwd[j+1] = tempPwdSort;
+							}// 二重循环终了
+						}// 一重循环终了
+					}// 循环终了
+
+					System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+					System.out.println("                              排行榜");
+					System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");					
+					System.out.println("|                        石头剪刀布大战TOP 10                    ");
+					System.out.println("|                                                               ");
+					System.out.println("|        名次                  用户名                 得分       ");
+					System.out.println("|                                                               ");
+					System.out.println("|      1                   "+name[0]+"              "+score[0]);
+					System.out.println("|                                                               ");
+					System.out.println("|      2                   "+name[1]+"              "+score[1]);
+					System.out.println("|                                                               ");
+					System.out.println("|      3                   "+name[2]+"              "+score[2]);
+					System.out.println("|                                                               ");
+					System.out.println("|      4                   "+name[3]+"              "+score[3]);
+					System.out.println("|                                                               ");
+					System.out.println("|      5                   "+name[4]+"              "+score[4]);
+					System.out.println("|                                                               ");
+					System.out.println("|      6                   "+name[5]+"              "+score[5]);
+					System.out.println("|                                                               ");
+					System.out.println("|      7                   "+name[6]+"              "+score[6]);
+					System.out.println("|                                                               ");
+					System.out.println("|      8                   "+name[7]+"              "+score[7]);
+					System.out.println("|                                                               ");
+					System.out.println("|      9                   "+name[8]+"              "+score[8]);
+					System.out.println("|                                                               ");
+					System.out.println("|     10                   "+name[9]+"              "+score[9]);
+					System.out.println("|                                                               ");
+					System.out.println("|                                                               ");
+					System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+					System.out.println("                          排行榜显示终了");
+					System.out.println("                        按任意键返回主页面~");
+					System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+					key = input.next();//用户输入
+					break;//排行榜结束
+					
+
+				case 0 :// 退出
+					System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+					System.out.println("                        退出游戏,欢迎下次光临~");
+					System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+					return;// 退出终了
+/*
+================================================================================================================================
+
+										               输入错误区
+
+
+*/
+				default://用户输入错误 提示用户
+					System.out.println("输入有误,请输入数字1 , 2 , 3 或者 0 ~");
+					//提示终了
+
+			}// 游戏终了
+
+		}while(option != 0);// 游戏循环终了
+	}
+}
