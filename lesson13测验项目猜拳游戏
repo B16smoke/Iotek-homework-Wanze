@@ -16,7 +16,7 @@ int index = random.nextInt(2);//随机0~2之间的数
 import java.util.Scanner;
 import java.util.Random;
 
-public class Mora{
+public class Mora666{
 
 	public static void main(String[] args){//主方法		
 
@@ -46,7 +46,7 @@ public class Mora{
 		System.out.println("                        //      `.:    :    :.`      \\                         ");
 		System.out.println("                                                                          ");
 		System.out.println("                                                                          ");
-		System.out.println("		    	            [请按任意键开始游戏]                            ");
+		System.out.println("		    	     [请按任意键开始游戏]                            ");
 		System.out.println("                                                                          ");
 		System.out.println("============================================================================");//欢迎界面终了
 /*
@@ -57,7 +57,7 @@ public class Mora{
 		String key = input.next();// 用户输入 程序开始
 
 		//预先填入10个伪数据
-		String[] name = {"宛泽","范范","小hui","Ares","双强","Bella","帅康","周杰伦","昆凌","Zack"};//用户名 用户名太长会导致排行榜显示对不齐...
+		String[] name = {"宛泽","范范","小hui","Ares","双强","Bella","帅康","周杰伦","昆凌","Zack"};//用户名 用户名太长会导致排行榜显示不美观
 		String[] pwd = {"7507058","123","xiaohui","Bai","topgun","tian","555","jay","jaychou","superman"};//用户密码
 		int[] score = {5, 20, 6, 1, 2, 7, 3, 8, 0, 9};//用户成绩
 
@@ -66,6 +66,7 @@ public class Mora{
 
 		String newName = null;//注册新用户的用户名
 		String newPwd = null;// 注册新用户的密码
+		int nameJudge = 0;
 		
 		String pcName = null;// 选择对战的对手名
 		
@@ -91,7 +92,7 @@ public class Mora{
 			System.out.println("|*******                                                            *******|");
 			System.out.println("|*********                                                        *********|");
 			System.out.println("|***********                                                    ***********|");
-			System.out.println("|*************        1.注册   2.登录   3.排行榜   0.退出     *************|");
+			System.out.println("|*************        1.注册   2.登录   3.排行榜   0.退出    	      *************|");
 			System.out.println("|***********                                                    ***********|");
 			System.out.println("|*********                请输入序号来执行相应操作     		  *********|");
 			System.out.println("|*******                                                            *******|");
@@ -122,49 +123,65 @@ public class Mora{
 						String newPwd01 = input.next();//第一遍输入密码
 						System.out.println("请再次确认密码:");
 						String newPwd02 = input.next();//第二遍确认密码
+						
+						// 判断注册用户名是否等于老用户
+						for (int i = 0; i < name.length; i++) {
+					        if (name[i].equals(newName)) {
+					        	System.out.println("注册失败~");
+					            System.out.println("该用户已存在~"); // 该用户名存在
+					            break;
+					        }else {
+					        	nameJudge = 1;//判断用户名是否是老用户
+					        }
+					    }//判断终了
 
-						if(newPwd01.equals(newPwd02)){// 判断两次密码输入是否一致
-							newPwd = newPwd01;// 新建用户密码
-							System.out.println("注册成功!请输入2登录进行游戏~");
-							break;
-						}else{
-							System.out.println("两次密码输入不一致,请重新输入~");
-							System.out.println("***********************************************************");
-							flag = true;
-						}// 判断密码终了
+						if(nameJudge == 1) {
+							if(newPwd01.equals(newPwd02)){// 判断两次密码输入是否一致
+								newPwd = newPwd01;// 新建用户密码
+								System.out.println("注册成功!请输入2登录进行游戏~");
+								
+								//用更换地址实现数组内数量的增加
+
+								//用户名扩容=============================================================
+								String []tempName = new String[name.length + 1];//暂时定义一个新用户名数组
+								for(int i = 0; i < name.length; i++){
+									tempName[i] = name[i];//前面10项不变					
+								}
+								tempName[tempName.length - 1] = newName;//新增用户名在最末尾
+								name = tempName;
+								//用户名扩容终了
+
+								//用户密码扩容===========================================================
+								String []tempPwd = new String[pwd.length + 1];//暂时定义一个新用户密码数组
+								for(int i = 0; i < pwd.length; i++){
+									tempPwd[i] = pwd[i];//前面10项不变					
+								}
+								tempPwd[tempPwd.length - 1] = newPwd;//新增用户密码在最末尾
+								pwd = tempPwd;
+								//用户密码扩容终了
+
+								//用户得分扩容=============================================================
+								int []tempScore = new int[score.length + 1];//暂时定义一个新用户名数组
+								for(int i = 0; i < score.length; i++){
+									tempScore[i] = score[i];//前面10项不变					
+								}
+								tempScore[tempScore.length - 1] = 0;//新增用户得分为0
+								score = tempScore;
+								//用户得分扩容终了=========================================================
+								break;
+								
+							}else{
+								System.out.println("两次密码输入不一致,请重新输入~");
+								System.out.println("***********************************************************");
+								flag = true;
+							}// 判断密码终了
+						}// 新用户添加数组终了
+						
+						
 					}while(flag);//注册循环终了
 					flag = false;// 判断归零
 					
-
-					//用更换地址实现数组内数量的增加
-
-					//用户名扩容=============================================================
-					String []tempName = new String[name.length + 1];//暂时定义一个新用户名数组
-					for(int i = 0; i < name.length; i++){
-						tempName[i] = name[i];//前面10项不变					
-					}
-					tempName[tempName.length - 1] = newName;//新增用户名在最末尾
-					name = tempName;
-					//用户名扩容终了
-
-					//用户密码扩容===========================================================
-					String []tempPwd = new String[pwd.length + 1];//暂时定义一个新用户密码数组
-					for(int i = 0; i < pwd.length; i++){
-						tempPwd[i] = pwd[i];//前面10项不变					
-					}
-					tempPwd[tempPwd.length - 1] = newPwd;//新增用户密码在最末尾
-					pwd = tempPwd;
-					//用户密码扩容终了
-
-					//用户得分扩容=============================================================
-					int []tempScore = new int[score.length + 1];//暂时定义一个新用户名数组
-					for(int i = 0; i < score.length; i++){
-						tempScore[i] = score[i];//前面10项不变					
-					}
-					tempScore[tempScore.length - 1] = 0;//新增用户得分为0
-					score = tempScore;
-					//用户得分扩容终了=========================================================
-
+				
 					break;// 注册账号终了
 /*
 ================================================================================================================================
@@ -354,27 +371,27 @@ public class Mora{
 					System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");					
 					System.out.println("|                        石头剪刀布大战TOP 10                    ");
 					System.out.println("|                                                               ");
-					System.out.println("|        名次                  用户名                 得分       ");
+					System.out.println("| \t  \t 名次 \t  \t 用户名 \t  \t 得分       ");
 					System.out.println("|                                                               ");
-					System.out.println("|      1                   "+name[0]+"              "+score[0]);
+					System.out.println("| \t  \t 1 \t  \t "+name[0]+" \t  \t "+score[0]);
 					System.out.println("|                                                               ");
-					System.out.println("|      2                   "+name[1]+"              "+score[1]);
+					System.out.println("| \t  \t 2 \t  \t "+name[1]+" \t  \t "+score[1]);
 					System.out.println("|                                                               ");
-					System.out.println("|      3                   "+name[2]+"              "+score[2]);
+					System.out.println("| \t  \t 3 \t  \t "+name[2]+" \t  \t "+score[2]);
 					System.out.println("|                                                               ");
-					System.out.println("|      4                   "+name[3]+"              "+score[3]);
+					System.out.println("| \t  \t 4 \t  \t "+name[3]+" \t  \t "+score[3]);
 					System.out.println("|                                                               ");
-					System.out.println("|      5                   "+name[4]+"              "+score[4]);
+					System.out.println("| \t  \t 5 \t  \t "+name[4]+" \t  \t "+score[4]);
 					System.out.println("|                                                               ");
-					System.out.println("|      6                   "+name[5]+"              "+score[5]);
+					System.out.println("| \t  \t 6 \t  \t "+name[5]+" \t  \t "+score[5]);
 					System.out.println("|                                                               ");
-					System.out.println("|      7                   "+name[6]+"              "+score[6]);
+					System.out.println("| \t  \t 7 \t  \t "+name[6]+" \t  \t "+score[6]);
 					System.out.println("|                                                               ");
-					System.out.println("|      8                   "+name[7]+"              "+score[7]);
+					System.out.println("| \t  \t 8 \t  \t "+name[7]+" \t  \t "+score[7]);
 					System.out.println("|                                                               ");
-					System.out.println("|      9                   "+name[8]+"              "+score[8]);
+					System.out.println("| \t  \t 9 \t  \t "+name[8]+" \t  \t "+score[8]);
 					System.out.println("|                                                               ");
-					System.out.println("|     10                   "+name[9]+"              "+score[9]);
+					System.out.println("| \t  \t 10 \t  \t "+name[9]+" \t  \t "+score[9]);
 					System.out.println("|                                                               ");
 					System.out.println("|                                                               ");
 					System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
