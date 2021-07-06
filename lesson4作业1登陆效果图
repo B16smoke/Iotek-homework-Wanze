@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+	</head>
+	
+	<body>
+		<form action="https://github.com/B16smoke/Iotek-homework-Wanze" method="post">
+			<table border="0">
+				<tr>
+					<td align="right">登录名:&nbsp;&nbsp;</td>
+					<!-- 文本右对齐,&nbsp;为空格 -->
+					<td><input type="text" size="28px" name="username"/>(可包含a-z、0-9和下划线)</td>
+					<td><img src="pencil.png" ><b>阅读网服务协议</b></td>
+				</tr>				
+					<!--以三列的无边框表格方式形成页面样式-->
+					<!-- IE显示的第二列输入栏长短不一致,但是IE没问题,我设置了size,不知道为什么还是不一样长 -->
+				<tr>
+					<td align="right">密码:&nbsp;&nbsp;</td>
+					<td><input type="password" name="pwd" size="28px"/>(至少包含6个字符)</td>
+					<td rowspan="8" ><textarea cols="30" rows="20" readonly="readonly">欢迎阅读服务条款协议……</textarea></td>
+					<!-- 跨8行的合并表格,<textarea>标签可以用多行文本框填满表格,
+					但是表格可拖动,并影响页面布局,暂时没有解决 -->
+				</tr>
+				<tr>
+					<td align="right">再次输入密码:&nbsp;&nbsp;</td>
+					<td><input type="password" name="repwd" size="28px"></td>
+				</tr>
+				<tr>
+					<td align="right">电子邮箱:&nbsp;&nbsp;</td>
+					<td><input type="text" name="email" size="28px">必须包含@字符</td>
+				</tr>
+				<tr>
+					<td align="right">性别:&nbsp;&nbsp;</td>
+					<td>
+						<input type="radio" value="male" name="sex" checked="checked">
+						<img src="male.png" >男&nbsp;&nbsp;
+						<input type="radio" value="female" name="sex" >
+						<img src="female.png" >女
+					</td>
+				</tr>
+				<tr>
+					<td align="right">头像:&nbsp;&nbsp;</td>
+					<td>
+						<input type="text" disabled="disabled" size="17"/>
+						<input type="file" name="touxiang" value="浏览本地文件" size="20">
+					</td>
+					<!-- 先创建一个不可动的灰色框,再在后面加了一个上传文件按钮,目的是尽量贴合模板
+					 此处应该是显示问题,IE和Chrome的显示出来不一样-->
+				</tr>
+				<tr>
+					<td align="right">爱好:&nbsp;&nbsp;</td>
+					<td>
+						<input type="checkbox" value="sport" name="hobby">运动
+						<input type="checkbox" value="chat" name="hobby">聊天
+						<input type="checkbox" value="game" name="hobby">玩游戏
+					</td>
+				</tr>
+				<tr>
+					<td align="right">喜欢的城市:&nbsp;&nbsp;</td>
+					<td>
+						<select name="city" id="city">
+							<option value="none" selected="selected">[请选择]</option>
+							<option value="beijing">北京</option>
+							<option value="shanghai">上海</option>							
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="text" size="31" disabled="disabled" value="请务必阅读服务条款，提交注册信息">
+						<input type="reset" value="重    填">
+					</td>
+					<!-- 没有提交按钮,只有重置按钮,就很离谱 -->
+				</tr>
+			</table>	
+		</form>
+	</body>
+</html>
